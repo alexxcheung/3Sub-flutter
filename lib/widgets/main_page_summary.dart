@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'main_page_summary_cell.dart';
 
 class MainPageSummary extends StatelessWidget {
-  const MainPageSummary({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

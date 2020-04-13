@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'screens/add_subscription_detail_page_screen.dart';
+import 'screens/create_subscription_page_screen.dart';
 import 'screens/main_page_screen.dart';
 import 'screens/search_page_screen.dart';
+import 'screens/view_subscription_detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
           button: TextStyle(fontSize: 14, fontFamily: "Avenir Next", fontWeight: FontWeight.w400, color: Color(0xFF9D9D9D)),
         )
       ),
-      home: AddSubscriptionDetailScreen(),
+      home: MainPageScreen(),
     );
   }
 }

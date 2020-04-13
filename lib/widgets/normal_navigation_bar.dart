@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 
 
 class NormalNavigationBar extends StatelessWidget {
-  const NormalNavigationBar({Key key}) : super(key: key);
+  final String _title;
+  final VoidCallback _backOnTap;
+  final VoidCallback _saveOnTap;
+
+  NormalNavigationBar(this._title, this._backOnTap, this._saveOnTap);
 
   @override
   Widget build(BuildContext context) {
     return  AppBar(
             elevation: 0,
+            leading: Container(),
             backgroundColor: Theme.of(context).backgroundColor,
             flexibleSpace: Container(
               height: 100,
@@ -20,16 +25,16 @@ class NormalNavigationBar extends StatelessWidget {
                     FlatButton(
                       child: Text("Back",
                           style: Theme.of(context).textTheme.body2),
-                      onPressed: () {},
+                      onPressed: _backOnTap,
                     ),
                     Text(
-                      "Add Subscription",
-                      style: Theme.of(context).textTheme.headline,
+                      _title,
+                      style: TextStyle(fontSize: 20, fontFamily: "Helvetica Neue", fontWeight: FontWeight.w600),
                     ),
                     FlatButton(
                       child: Text("Save",
                           style: Theme.of(context).textTheme.body2),
-                      onPressed: () {},
+                      onPressed: _saveOnTap,
                     ),
                   ],
                 ),
